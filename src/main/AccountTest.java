@@ -47,5 +47,6 @@ public class AccountTest {
 	@Test
 	public final void testMonthlyInterestRate() {
 		c.setAnnualInterestRate(.0045);
+		
 	}
 }
