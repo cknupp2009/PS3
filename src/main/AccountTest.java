@@ -22,7 +22,7 @@ public class AccountTest {
 
 	@Before
 	public void setUp() throws Exception {
-		c = new Account(1122);
+		c = new Account();
 	}
 
 	@After
@@ -32,7 +32,20 @@ public class AccountTest {
 
 	@Test
 	public final void testDeposit() {
-		int x = 
+		int x = 0;
+		
+		while (x < 20){
+			c.deposit(3000);
+		}
 	}
-
+	@Test
+	public final void testWithdraw() {
+		c.setBalance(20000);
+		assertEquals("True", (long)c.getBalance(), (long)20000.00);
+	c.withdraw(2500.00);	
+	}
+	@Test
+	public final void testMonthlyInterestRate() {
+		c.setAnnualInterestRate(.0045);
+	}
 }
